@@ -122,11 +122,11 @@ const styles = StyleSheet.create({
     featureTitle: {
         fontSize: FONTS.sizeLg,
         fontWeight: 'bold',
-        color: COLORS.textPrimary,
+        color: COLORS.textDark,
         marginBottom: SPACING.xs,
     },
     featureDesc: {
-        color: COLORS.textSecondary,
+        color: COLORS.textDarkSecondary,
         fontSize: FONTS.sizeBase,
     }
 });

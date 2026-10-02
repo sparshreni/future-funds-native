@@ -250,11 +250,11 @@ const styles = StyleSheet.create({
     articleTitle: {
         fontSize: FONTS.sizeLg,
         fontWeight: 'bold',
-        color: COLORS.textPrimary,
+        color: COLORS.textDark,
         marginBottom: 4,
     },
     articleSummary: {
-        color: COLORS.textSecondary,
+        color: COLORS.textDarkSecondary,
         fontSize: FONTS.sizeSm,
         marginBottom: SPACING.md,
     },
@@ -263,11 +263,11 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     readTime: {
-        color: COLORS.textMuted,
+        color: COLORS.textDarkMuted,
         fontSize: 12,
     },
     readMore: {
-        color: COLORS.primaryLight,
+        color: COLORS.primary,
         fontSize: 12,
         fontWeight: 'bold',
     },

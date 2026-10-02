@@ -159,23 +159,23 @@ const styles = StyleSheet.create({
     levelText: {
         fontSize: FONTS.size3xl,
         fontWeight: '800',
-        color: COLORS.primaryLight,
+        color: COLORS.primary,
         marginBottom: SPACING.sm,
     },
     progressBarBg: {
         width: '100%',
         height: 12,
-        backgroundColor: 'rgba(255,255,255,0.1)',
+        backgroundColor: COLORS.cardInset,
         borderRadius: 999,
         overflow: 'hidden',
     },
     progressBarFill: {
         height: '100%',
-        backgroundColor: COLORS.primaryLight,
+        backgroundColor: COLORS.primary,
         borderRadius: 999,
     },
     xpText: {
-        color: COLORS.textSecondary,
+        color: COLORS.textDarkSecondary,
         marginTop: SPACING.sm,
         fontSize: FONTS.sizeSm,
     },
@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
     },
     badgeItem: {
         alignItems: 'center',
-        backgroundColor: 'rgba(255,255,255,0.05)',
+        backgroundColor: COLORS.cardInset,
         padding: SPACING.sm,
         borderRadius: 8,
         width: '30%',
@@ -197,12 +197,12 @@ const styles = StyleSheet.create({
         marginBottom: 4,
     },
     badgeName: {
-        color: COLORS.textPrimary,
+        color: COLORS.textDark,
         fontSize: 10,
         textAlign: 'center',
     },
     emptyText: {
-        color: COLORS.textMuted,
+        color: COLORS.textDarkMuted,
         textAlign: 'center',
         width: '100%',
         padding: SPACING.md,
@@ -225,11 +225,11 @@ const styles = StyleSheet.create({
     statValue: {
         fontSize: FONTS.sizeXl,
         fontWeight: 'bold',
-        color: COLORS.primaryLight,
+        color: COLORS.primary,
     },
     statLabel: {
         fontSize: FONTS.sizeXs,
-        color: COLORS.textSecondary,
+        color: COLORS.textDarkSecondary,
     },
     financialStats: {
         flexDirection: 'row',
@@ -240,14 +240,14 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     finLabel: {
-        color: COLORS.textMuted,
+        color: COLORS.textDarkMuted,
         fontSize: FONTS.sizeXs,
         marginBottom: 4,
     },
     finValue: {
         fontSize: FONTS.sizeLg, // Reduced size slightly to fit mobile
         fontWeight: 'bold',
-        color: COLORS.textPrimary,
+        color: COLORS.textDark,
     }
 });
 

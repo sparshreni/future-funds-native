@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
         fontSize: FONTS.sizeLg,
     },
     textOutline: {
-        color: COLORS.textPrimary,
+        color: COLORS.primaryLight,
     },
     disabled: {
         opacity: 0.6,

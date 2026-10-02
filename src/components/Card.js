@@ -19,8 +19,8 @@ export const Card = ({ children, title, style, description }) => {
 
 const styles = StyleSheet.create({
     card: {
-        backgroundColor: 'rgba(255, 255, 255, 0.05)',
-        borderColor: COLORS.border,
+        backgroundColor: COLORS.card,
+        borderColor: COLORS.cardBorder,
         borderWidth: 1,
         borderRadius: 16, // xl
         padding: SPACING.lg,
@@ -42,11 +42,11 @@ const styles = StyleSheet.create({
     title: {
         fontSize: FONTS.size2xl,
         fontWeight: 'bold',
-        color: COLORS.textPrimary, // Fallback if gradient not applied to text (RN text gradient is tricky)
+        color: COLORS.textDark,
         marginBottom: SPACING.xs,
     },
     description: {
-        color: COLORS.textSecondary,
+        color: COLORS.textDarkSecondary,
         fontSize: FONTS.sizeSm,
     }
 });

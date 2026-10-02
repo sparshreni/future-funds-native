@@ -309,13 +309,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     statLabel: {
-        color: COLORS.textSecondary,
+        color: COLORS.textDarkSecondary,
         fontSize: FONTS.sizeXs,
     },
     statValue: {
         fontSize: FONTS.sizeXl,
         fontWeight: 'bold',
-        color: COLORS.textPrimary,
+        color: COLORS.textDark,
     },
     statChange: {
         fontSize: FONTS.sizeSm,
@@ -341,11 +341,11 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     name: {
-        color: COLORS.textSecondary,
+        color: COLORS.textDarkSecondary,
         fontSize: FONTS.sizeSm,
     },
     ownedText: {
-        color: COLORS.primaryLight,
+        color: COLORS.primary,
         fontSize: FONTS.sizeXs,
         fontWeight: '600',
         marginTop: 2,
@@ -356,7 +356,7 @@ const styles = StyleSheet.create({
     price: {
         fontSize: FONTS.sizeLg,
         fontWeight: 'bold',
-        color: COLORS.textPrimary,
+        color: COLORS.textDark,
     },
     change: {
         fontSize: FONTS.sizeSm,

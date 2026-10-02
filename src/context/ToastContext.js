@@ -51,21 +51,23 @@ const ToastItem = ({ message, type, duration, onHide }) => {
         ]).start(() => onHide());
     }, []);
 
-    let bg = COLORS.bgLight;
+    // Info toasts use the indigo surface with a purple outline
+    let bg = COLORS.surface;
+    let borderColor = COLORS.primary;
     let icon = <Info color={COLORS.primaryLight} size={20} />;
 
     if (type === 'success') {
-        bg = 'rgba(16, 185, 129, 0.95)';
+        bg = COLORS.success;
+        borderColor = COLORS.success;
         icon = <CheckCircle color="white" size={20} />;
     } else if (type === 'error') {
-        bg = 'rgba(239, 68, 68, 0.95)';
+        bg = COLORS.error;
+        borderColor = COLORS.error;
         icon = <AlertCircle color="white" size={20} />;
-    } else {
-        bg = 'rgba(58, 74, 64, 0.95)'; // Primary dark
     }
 
     return (
-        <Animated.View style={[styles.toast, { opacity, backgroundColor: bg }]}>
+        <Animated.View style={[styles.toast, { opacity, backgroundColor: bg, borderColor }]}>
             <View style={styles.content}>
                 {icon}
                 <Text style={styles.text}>{message}</Text>
@@ -87,6 +89,7 @@ const styles = StyleSheet.create({
     toast: {
         padding: SPACING.md,
         borderRadius: 12,
+        borderWidth: 1,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,

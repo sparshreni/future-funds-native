@@ -149,10 +149,10 @@ const ProfileScreen = ({ navigation }) => {
                         {lockedBadges.map(badge => (
                             <View key={badge.id} style={[styles.badgeCard, styles.lockedBadge]}>
                                 <View style={styles.badgeIcon}>
-                                    <Lock color={COLORS.textMuted} size={24} />
+                                    <Lock color={COLORS.textDarkMuted} size={24} />
                                 </View>
                                 <View style={styles.badgeInfo}>
-                                    <Text style={[styles.badgeName, { color: COLORS.textMuted }]}>{badge.name}</Text>
+                                    <Text style={[styles.badgeName, { color: COLORS.textDarkMuted }]}>{badge.name}</Text>
                                     <Text style={styles.badgeDesc}>{badge.description}</Text>
                                 </View>
                             </View>
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
         width: 100,
         height: 100,
         borderRadius: 50,
-        backgroundColor: 'rgba(255,255,255,0.1)',
+        backgroundColor: COLORS.cardInset,
         justifyContent: 'center',
         alignItems: 'center',
         marginBottom: SPACING.md,
@@ -189,11 +189,11 @@ const styles = StyleSheet.create({
     name: {
         fontSize: FONTS.size2xl,
         fontWeight: 'bold',
-        color: COLORS.textPrimary,
+        color: COLORS.textDark,
         marginBottom: 4,
     },
     memberSince: {
-        color: COLORS.textMuted,
+        color: COLORS.textDarkMuted,
         marginBottom: SPACING.md,
     },
     levelBadge: {
@@ -214,17 +214,17 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         paddingVertical: SPACING.sm,
         borderBottomWidth: 1,
-        borderColor: COLORS.border,
+        borderColor: COLORS.cardInsetBorder,
     },
     statLabel: {
-        color: COLORS.textSecondary,
+        color: COLORS.textDarkSecondary,
     },
     statValue: {
         fontWeight: 'bold',
-        color: COLORS.textPrimary,
+        color: COLORS.textDark,
     },
     label: {
-        color: COLORS.textPrimary,
+        color: COLORS.textDark,
         marginBottom: SPACING.sm,
     },
     gradeButtons: {
@@ -235,16 +235,16 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: SPACING.sm,
         borderWidth: 1,
-        borderColor: COLORS.border,
+        borderColor: COLORS.cardInsetBorder,
         borderRadius: 8,
         alignItems: 'center',
     },
     gradeBtnActive: {
-        backgroundColor: COLORS.primaryLight,
-        borderColor: COLORS.primaryLight,
+        backgroundColor: COLORS.primary,
+        borderColor: COLORS.primary,
     },
     gradeBtnText: {
-        color: COLORS.textSecondary,
+        color: COLORS.textDarkSecondary,
         fontSize: 12,
     },
     gradeBtnTextActive: {
@@ -267,8 +267,8 @@ const styles = StyleSheet.create({
         borderColor: 'rgba(16, 185, 129, 0.3)',
     },
     lockedBadge: {
-        backgroundColor: 'rgba(255,255,255,0.03)',
-        borderColor: COLORS.border,
+        backgroundColor: COLORS.cardInset,
+        borderColor: COLORS.cardInsetBorder,
         opacity: 0.7,
     },
     badgeIcon: {
@@ -280,12 +280,12 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     badgeName: {
-        color: COLORS.textPrimary,
+        color: COLORS.textDark,
         fontWeight: 'bold',
         marginBottom: 2,
     },
     badgeDesc: {
-        color: COLORS.textSecondary,
+        color: COLORS.textDarkSecondary,
         fontSize: 12,
     }
 });

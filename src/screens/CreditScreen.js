@@ -214,18 +214,18 @@ const styles = StyleSheet.create({
     cardTitle: {
         fontSize: FONTS.sizeXl,
         fontWeight: 'bold',
-        color: COLORS.textPrimary,
+        color: COLORS.textDark,
         marginBottom: SPACING.sm,
     },
     cardDesc: {
-        color: COLORS.textSecondary,
+        color: COLORS.textDarkSecondary,
         marginBottom: SPACING.md,
     },
     tipsList: {
         gap: SPACING.sm,
     },
     tip: {
-        color: COLORS.textSecondary,
+        color: COLORS.textDarkSecondary,
         fontSize: FONTS.sizeMd,
     },
     modalBg: {

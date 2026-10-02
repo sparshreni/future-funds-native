@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DarkTheme } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -18,6 +17,9 @@ import { ToastProvider } from './src/context/ToastContext';
 
 // Theme
 import { COLORS } from './src/constants/theme';
+
+// Components
+import AIAgentBubble from './src/components/AIAgentBubble';
 
 // Screens (Placeholders for now)
 
@@ -44,7 +46,7 @@ const AppNavigator = () => {
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: 'rgba(58, 74, 64, 0.95)', // Dark Sage Transparent
+          backgroundColor: COLORS.surface,
           borderTopWidth: 0,
           elevation: 0,
           height: 60,
@@ -79,14 +81,14 @@ const AppNavigator = () => {
         }}
       />
 
-      {/* <Tab.Screen
+      <Tab.Screen
         name="Investing"
         component={InvestingScreen}
         options={{
           tabBarIcon: ({ color, size }) => <TrendingUp color={color} size={size} />,
           tabBarLabel: 'Invest'
         }}
-      /> */}
+      />
       <Tab.Screen
         name="Credit"
         component={CreditScreen}
@@ -116,23 +118,28 @@ const AppNavigator = () => {
 };
 
 export default function App() {
+  const appTheme = {
+    ...DarkTheme,
+    colors: {
+      ...DarkTheme.colors,
+      background: COLORS.bgDark,
+      primary: COLORS.primary,
+      card: COLORS.bgMedium,
+      text: COLORS.textPrimary,
+      border: COLORS.border,
+      notification: COLORS.primaryLight,
+    },
+  };
+
   return (
     <SafeAreaProvider>
       <UserProvider>
         <ToastProvider>
-          <NavigationContainer theme={{
-            colors: {
-              background: COLORS.bgDark,
-              primary: COLORS.primary,
-              card: COLORS.bgMedium,
-              text: COLORS.textPrimary,
-              border: COLORS.border,
-              notification: COLORS.primaryLight,
-            }
-          }}>
+          <NavigationContainer theme={appTheme}>
             <StatusBar style="light" />
             <AppNavigator />
           </NavigationContainer>
+          <AIAgentBubble />
         </ToastProvider>
       </UserProvider>
     </SafeAreaProvider>

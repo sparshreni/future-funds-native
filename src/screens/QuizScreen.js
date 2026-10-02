@@ -253,7 +253,7 @@ const styles = StyleSheet.create({
     questionText: {
         fontSize: FONTS.sizeLg,
         fontWeight: 'bold',
-        color: COLORS.textPrimary,
+        color: COLORS.textDark,
         textAlign: 'center',
     },
     optionsContainer: {
@@ -356,17 +356,17 @@ const styles = StyleSheet.create({
         marginBottom: SPACING.lg,
     },
     scoreLabel: {
-        color: COLORS.textSecondary,
+        color: COLORS.textDarkSecondary,
         fontSize: FONTS.sizeLg,
         marginBottom: SPACING.xs,
     },
     scoreValue: {
         fontSize: 64,
         fontWeight: 'bold',
-        color: COLORS.primaryLight,
+        color: COLORS.primary,
     },
     scoreDetail: {
-        color: COLORS.textMuted,
+        color: COLORS.textDarkMuted,
         fontSize: FONTS.sizeMd,
         marginTop: SPACING.sm,
     },
